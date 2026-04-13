@@ -1,5 +1,9 @@
 const express = require('express');
+const { inject } = require('@vercel/analytics');
 const app = express();
+
+// Inject Vercel Analytics
+inject();
 
 app.use(express.json());
 
